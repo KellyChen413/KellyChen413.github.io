@@ -455,9 +455,9 @@ footer p{color:var(--text-3);font-size:14px;margin-top:6px}
       <article class="card proj feature rv">
         <div class="shot"><img src="shot-security.jpg" alt="資安情境風險分析報告截圖" loading="lazy"><span class="type t-cyan">RISK ANALYSIS</span></div>
         <div class="body">
-          <div class="awards"><span class="aw2">AI 大數據班 · 2026.09</span></div>
+          <div class="awards"><span class="aw2">AI 大數據班 · 小組作業 · 2026.09</span></div>
           <h3>資安情境風險分析報告</h3>
-          <p>把一份只說明「是什麼」的 Excel 對應表，變成回答「<b>有多危險、為什麼、先做什麼</b>」的決策工具。27 個情境用「可能性 × 衝擊」同一把尺評分，畫成 5×5 風險矩陣，最後整理成三階段改善路線圖。</p>
+          <p>AI 協助完成的小組課後作業：老師講義只說明資安情境「是什麼」，這份報告進一步回答「<b>有多危險、為什麼、先做什麼</b>」。27 個情境以「可能性 × 衝擊」評分，畫成 5×5 風險矩陣，並整理成三階段改善路線圖。<br><small style="opacity:.75">我負責整理老師的講義、請組員標註題目對應的簡報頁數，再交給 Claude 生成報告與網頁，並發布到 GitHub Pages。風險評分與矩陣由 Claude 生成。</small></p>
           <div class="metrics">
             <div><b class="grad">27</b><span>情境逐一評估</span></div>
             <div><b class="grad">5×5</b><span>風險矩陣</span></div>
@@ -465,7 +465,7 @@ footer p{color:var(--text-3);font-size:14px;margin-top:6px}
           </div>
           <div class="chips"><span class="chip">風險評估</span><span class="chip">資料視覺化</span><span class="chip">Excel → HTML</span><span class="chip">GitHub Pages</span></div>
           <div class="foot">
-            <span class="role">👥 小組練習</span>
+            <span class="role">👥 小組作業</span>
             <div class="links">
               <a href="https://kellychen413.github.io/0930wikiteamwork-Information-security/%E8%B3%87%E5%AE%89%E6%83%85%E5%A2%83%E9%A2%A8%E9%9A%AA%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A.html" target="_blank" rel="noopener">Live ↗</a>
               <a href="https://github.com/KellyChen413/0930wikiteamwork-Information-security" target="_blank" rel="noopener">Code ↗</a>
@@ -795,12 +795,9 @@ const JOURNAL = [
   { date:"2026-10-16", title:"前端基礎：看懂 HTML，才知道爬蟲要去哪裡抓資料",
     text:"學會用 id、class、屬性與層級關係定位網頁元素。看懂結構就像查帳先看懂科目，之後就能把每天手抄的匯率變成自動排程。",
     tags:"#HTML #爬蟲 #CSSSelector" },
-  { date:"2026-09-30", title:"第一份放上 GitHub Pages 的分析報告",
-    text:"把資安對應表的 27 個情境用『可能性 × 衝擊』量化成 5×5 風險矩陣。防護措施也能評分，只要問『如果沒做到，會發生什麼事？』——跟查核時評估內控缺失是同一套邏輯。",
+  { date:"2026-09-30", title:"小組作業：第一份放上 GitHub Pages 的分析報告",
+    text:"和組員一起整理老師的講義、標出簡報頁數，再用 Claude 生成 27 個情境的 5×5 風險矩陣報告，並放上 GitHub Pages。第一次走完從講義到線上報告的流程；『如果沒做到，會發生什麼事？』這個問法，跟查核時評估內控缺失很像。",
     tags:"#資安 #風險評估 #GitHub" },
-  { date:"2026-09-28", title:"寫完《Linux 學習工具書》26 章",
-    text:"把教材、講師筆記和 CheatSheet 整合成給商科背景的工具書。用『公文核閱層級』理解檔案權限之後，chmod 再也不用背。",
-    tags:"#Linux #文件 #教學" },
   { date:"2026-09-17", title:"從 ipconfig 看懂網路怎麼運作",
     text:"用 ipconfig /all 查實體位址、用 ping 測試連線，搞懂 IPv4 與 127.0.0.1。ping 不通的『要求等候逾時』，就像對帳時對不上的那一筆——先確認是哪一段斷掉。",
     tags:"#網路基礎 #CMD #IPv4",
@@ -808,9 +805,6 @@ const JOURNAL = [
   { date:"2026-09-22", title:"第一次在指令列裡架站",
     text:"從只會點滑鼠到用打字指揮一台電腦。查帳時『先看流程再看數字』的習慣，在這裡一樣好用。",
     tags:"#Linux #架站" },
-  { date:"2026-09-18", title:"用 Python 把 168 堂課表轉進行事曆",
-    text:"課表手動輸入太容易漏，寫了一個小程式讀 CSV、輸出 .ics。第一個真正替自己省時間的程式。",
-    tags:"#Python #自動化" },
   { date:"2026-09-16", title:"開訓：AI 大數據班第 9 梯次",
     text:"五個月、全日制。給自己的規則：每週在這裡、LinkedIn 和 IG 各記錄一次。",
     tags:"#起點" },
