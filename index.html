@@ -226,6 +226,7 @@ section.block{padding:96px 0}
 .mod .s{font-size:12px;text-align:right;color:var(--text-3);font-family:var(--mono)}
 .mod.done{color:var(--text-3)} .mod.done .s{color:#4ade80}
 .mod.live{color:var(--text);font-weight:600} .mod.live .s{color:var(--cyan)}
+.mod.part .s{color:var(--purple)}
 .journal{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
 .entry{padding:24px;display:flex;flex-direction:column}
 .entry time{font-family:var(--mono);font-size:12.5px;color:var(--cyan)}
@@ -725,31 +726,46 @@ soup = BeautifulSoup(html, <span class="s">"html.parser"</span>)
 <section class="block" id="credentials">
   <div class="wrap">
     <h2 class="title rv"><span class="grad">Credentials</span><small>證照與資格</small></h2>
-    <h3 class="sub-title rv">金融與證券 <small>Finance &amp; Securities</small></h3>
-    <div class="creds">
-      <div class="card cred rv"><div class="ic">📈</div><h4>證券商業務員</h4><span>證券暨期貨市場發展基金會</span></div>
-      <div class="card cred rv"><div class="ic">🏦</div><h4>金融市場常識與職業道德</h4><span>台灣金融研訓院</span></div>
-    </div>
-    <h3 class="sub-title rv">會計與財稅 <small>Accounting &amp; Tax</small></h3>
-    <div class="creds">
-      <div class="card cred rv"><div class="ic">🧮</div><h4>丙級會計事務技術士</h4><span>勞動部技能檢定</span></div>
-      <div class="card cred rv"><div class="ic">🧾</div><h4>TQC-OA 電腦會計</h4><span>電腦技能基金會</span></div>
-      <div class="card cred rv"><div class="ic">🏛️</div><h4>公職稅務經歷 5+ 年</h4><span>2020 – 2026 · 經歷</span></div>
-    </div>
     <h3 class="sub-title rv">資料與 AI <small>Data &amp; AI</small></h3>
     <div class="creds">
       <div class="card cred rv"><div class="ic">🗄️</div><h4>Introduction to SQL</h4><span>DataCamp · 2026.11</span></div>
       <div class="card cred rv"><div class="ic">🐍</div><h4>Introduction to Python</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">⚙️</div><h4>Introduction to Python for Developers</h4><span>DataCamp · 2026.11</span></div>
       <div class="card cred rv"><div class="ic">🤖</div><h4>Generative AI for Business</h4><span>DataCamp · 2026.11</span></div>
       <div class="card cred rv"><div class="ic">🧰</div><h4>Introduction to AI for Work</h4><span>DataCamp · 2026.11</span></div>
-      <div class="card cred rv"><div class="ic">⚙️</div><h4>Introduction to Python for Developers</h4><span>DataCamp · 2026.11</span></div>
       <div class="card cred rv"><div class="ic">✨</div><h4>Generative AI Foundations</h4><span>Pearson Critical Career Skills · 2026.10</span></div>
-      <div class="card cred rv"><div class="ic">💻</div><h4>丙級電腦軟體應用技術士</h4><span>勞動部技能檢定</span></div>
+      <div class="card cred rv"><div class="ic">🎓</div><h4>CCS GenAI 國際認證實戰班</h4><span>緯育 TibaMe · 2026.06</span></div>
       <div class="card cred rv"><div class="ic">🧠</div><h4>AI 大數據班 結訓</h4><span id="cred-ai">預計 2027.02</span></div>
     </div>
-    <h3 class="sub-title rv">商務企劃 <small>Business</small></h3>
+    <h3 class="sub-title rv">金融與證券 <small>Finance &amp; Securities</small></h3>
     <div class="creds">
-      <div class="card cred rv"><div class="ic">📝</div><h4>TBSA 商務企劃能力初級</h4><span>商務企劃能力檢定</span></div>
+      <div class="card cred rv"><div class="ic">📈</div><h4>證券商業務員</h4><span>證券商業同業公會 · 2018</span></div>
+      <div class="card cred rv"><div class="ic">🏦</div><h4>金融市場常識與職業道德</h4><span>台灣金融研訓院 · 2015</span></div>
+    </div>
+    <h3 class="sub-title rv">會計與電腦應用 <small>Accounting &amp; Systems</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">🧮</div><h4>丙級會計事務技術士（資訊）</h4><span>勞動部 · 2014</span></div>
+      <div class="card cred rv"><div class="ic">📒</div><h4>丙級會計事務技術士（人工記帳）</h4><span>勞工委員會 · 2013</span></div>
+      <div class="card cred rv"><div class="ic">🧾</div><h4>TQC 電腦會計（AIS）</h4><span>電腦技能基金會 · 2014</span></div>
+      <div class="card cred rv"><div class="ic">💻</div><h4>丙級電腦軟體應用技術士</h4><span>勞動部 · 2017</span></div>
+    </div>
+    <h3 class="sub-title rv">國家考試與公職專業 <small>Civil Service &amp; Public Sector</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">🏛️</div><h4>公務人員高等考試三級｜財稅行政</h4><span>考試院 · 2024</span></div>
+      <div class="card cred rv"><div class="ic">📜</div><h4>公務人員普通考試｜財稅行政</h4><span>考試院 · 2021</span></div>
+      <div class="card cred rv"><div class="ic">🏗️</div><h4>促進民間參與公共建設專業人員</h4><span>財政部 · 2021</span></div>
+      <div class="card cred rv"><div class="ic">📑</div><h4>採購專業人員基礎訓練</h4><span>行政院公共工程委員會 · 2024</span></div>
+      <div class="card cred rv"><div class="ic">🗂️</div><h4>公職稅務與財政經歷 5+ 年</h4><span>2020 – 2026 · 工作經歷</span></div>
+    </div>
+    <h3 class="sub-title rv">商務與語言 <small>Business &amp; Language</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">📝</div><h4>TBSA 商務企劃能力初級</h4><span>台灣商務策劃協會 · 2021</span></div>
+      <div class="card cred rv"><div class="ic">🌐</div><h4>Cambridge English A2</h4><span>劍橋國際英語認證 · 2017</span></div>
+      <div class="card cred rv"><div class="ic">🗣️</div><h4>TOEIC 550</h4><span>11/29、12/20 再次應考</span></div>
+    </div>
+    <h3 class="sub-title rv">其他 <small>Other</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">🏸</div><h4>羽球 C 級裁判</h4><span>中華民國羽球協會 · 2019</span></div>
     </div>
   </div>
 </section>
@@ -828,29 +844,40 @@ const JOURNAL = [
     text:"從只會點滑鼠到用打字指揮一台電腦。查帳時『先看流程再看數字』的習慣，在這裡一樣好用。",
     tags:"#Linux #架站" },
   { date:"2026-09-16", title:"開訓：AI 大數據班第 9 梯次",
-    text:"五個月、全日制。給自己的規則：每週在這裡、LinkedIn 和 IG 各記錄一次。",
+    text:"五個月、全日制的 AI 大數據人才養成班。從電腦基礎、Linux 一路學到 SQL、Python 與資料視覺化，目標是把財稅與資金管理的經驗，換成可以處理資料的技能。",
     tags:"#起點" },
 ];
 const SHOW = 6; // 首頁顯示幾則週記
 
-/* 課程模組（依官方課表整理） */
+/* 課程模組（依 2026/10/28 更新版課表整理）
+   [名稱, 第一堂, 最後一堂, 之後還會上的日期...]
+   狀態：最後一堂已過 = done；本週有課 = now；已開始但本週沒課 = 進行中；尚未開始 = 日期 */
 const MODULES = [
   ["電腦基礎概論","2026-09-17","2026-09-30"],["IoT 與資料收集","2026-09-18","2026-09-21"],
-  ["Linux 基礎到架站","2026-09-22","2026-10-05"],["SQL 資料庫","2026-10-07","2026-12-18"],
-  ["Python 基礎與應用","2026-10-15","2026-12-01"],["前端基礎","2026-10-16","2026-10-21"],
-  ["協作開發與虛擬化","2026-10-27","2027-01-07"],["數據視覺化分析平台","2026-11-05","2026-11-24"],
-  ["資料科學與生成式 AI","2026-11-09","2027-01-19"],["日誌分析平台","2026-11-16","2026-11-20"],
-  ["專案管理實務","2026-11-25","2026-12-03"],["雲端平台入門","2026-12-07","2026-12-14"],
-  ["資料整合應用","2026-12-09","2026-12-22"],["NoSQL 資料庫","2026-12-14","2026-12-19"],
-  ["畢業專題實作","2026-12-29","2027-02-23"],["LLM 大型語言模型","2027-01-19","2027-01-27"],
+  ["Linux 基礎到架站","2026-09-22","2026-10-05"],["SQL 資料庫","2026-10-07","2026-12-18","2026-12-17","2026-12-18"],
+  ["Python 基礎與應用","2026-10-15","2026-12-01","2026-11-30","2026-12-01"],["前端基礎","2026-10-16","2026-10-21"],
+  ["協作開發與虛擬化","2026-10-27","2027-01-07","2027-01-04","2027-01-05","2027-01-07"],
+  ["數據視覺化分析平台","2026-11-05","2026-11-25","2026-11-05","2026-11-06","2026-11-16","2026-11-24","2026-11-25"],
+  ["資料科學與生成式 AI","2026-11-09","2027-01-19","2026-11-09","2026-11-10","2026-11-11","2027-01-12","2027-01-13","2027-01-18","2027-01-19"],
+  ["日誌分析平台","2026-11-12","2026-11-19","2026-11-12","2026-11-13","2026-11-18","2026-11-19"],
+  ["專案管理實務","2026-11-23","2026-12-03","2026-11-23","2026-12-02","2026-12-03"],
+  ["雲端平台入門","2026-12-07","2026-12-14","2026-12-07","2026-12-08","2026-12-13","2026-12-14"],
+  ["資料整合應用","2026-12-09","2026-12-22","2026-12-09","2026-12-16","2026-12-21","2026-12-22"],
+  ["NoSQL 資料庫","2026-12-14","2026-12-20","2026-12-14","2026-12-15","2026-12-20"],
+  ["畢業專題實作","2026-12-23","2027-02-23","2026-12-23","2026-12-29","2027-01-06","2027-01-11","2027-01-14","2027-01-21","2027-01-22","2027-01-28","2027-02-15","2027-02-16","2027-02-17","2027-02-19","2027-02-22","2027-02-23"],
+  ["LLM 大型語言模型","2027-01-19","2027-01-27","2027-01-19","2027-01-20","2027-01-25","2027-01-26","2027-01-27"],
 ];
 
 const S=d=>new Date(d+"T00:00"), E=d=>new Date(d+"T23:59");
 const START=S("2026-09-16"), END=E("2027-02-24"), today=new Date();
 const clamp=x=>Math.max(0,Math.min(1,x));
 const week=Math.max(1,Math.min(23,Math.floor((today-START)/6048e5)+1));
-const live=MODULES.filter(m=>today>=S(m[1])&&today<=E(m[2]));
-const done=MODULES.filter(m=>today>E(m[2])).length;
+const wkStart=new Date(today.getFullYear(),today.getMonth(),today.getDate()-((today.getDay()+6)%7));
+const wkEnd=new Date(wkStart.getFullYear(),wkStart.getMonth(),wkStart.getDate()+7);
+const inWeek=m=>m.slice(3).some(d=>S(d)>=wkStart&&S(d)<wkEnd);
+const modState=m=>today>E(m[2])?"done":inWeek(m)?"live":today>=S(m[1])?"part":"todo";
+const live=MODULES.filter(m=>modState(m)==="live");
+const done=MODULES.filter(m=>modState(m)==="done").length;
 const pct=Math.round(clamp((today-START)/(END-START))*100);
 
 // 打字效果
@@ -871,8 +898,8 @@ document.getElementById("pct").textContent=pct+"%";
 document.getElementById("pct-line").innerHTML=`第 ${week} / 23 週 · 已完成 ${done} / ${MODULES.length} 個模組`+
   (live.length?`<br>本週：<b>${live.map(m=>m[0]).join("、")}</b>`:"");
 document.getElementById("mods").innerHTML=MODULES.map(m=>{
-  const st=today>E(m[2])?"done":today>=S(m[1])?"live":"todo";
-  const lb=st==="done"?"✓ done":st==="live"?"● now":m[1].slice(5).replace("-","/");
+  const st=modState(m);
+  const lb=st==="done"?"✓ done":st==="live"?"● now":st==="part"?"進行中":m[1].slice(5).replace("-","/");
   return `<div class="mod ${st}"><span>${m[0]}</span><span class="s">${lb}</span></div>`;}).join("");
 document.getElementById("journal").innerHTML=JOURNAL.slice(0,SHOW).map(j=>
   `<article class="card entry rv"><time>${j.date.replaceAll("-",".")}</time><h4>${j.cat?`<span class="chip">${j.cat}</span> `:""}${j.title}</h4><p>${j.text}</p><div class="tg">${j.tags}</div>${j.link?`<a class="nl" href="${j.link}" target="_blank" rel="noopener">📓 看完整筆記 ↗</a>`:""}</article>`).join("");
