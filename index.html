@@ -311,6 +311,8 @@ footer p{color:var(--text-3);font-size:14px;margin-top:6px}
 .note td code{white-space:nowrap}
 .insight{margin-top:22px;border-left:3px solid var(--cyan);background:color-mix(in srgb,var(--cyan) 8%,transparent);border-radius:0 12px 12px 0;padding:14px 18px;font-size:14.5px;color:var(--text-2)}
 .sub-title{font-family:var(--head);font-size:24px;margin-bottom:22px}
+.creds+.sub-title{margin-top:38px}
+.entry h4 .chip{font-size:12px;padding:2px 8px;margin-right:6px;vertical-align:middle}
 .sub-title small{font-family:"Noto Sans TC",sans-serif;font-size:13.5px;font-weight:500;color:var(--text-3);margin-left:10px}
 .quick{display:grid;gap:12px}
 .quick h3{margin-bottom:8px}
@@ -723,15 +725,31 @@ soup = BeautifulSoup(html, <span class="s">"html.parser"</span>)
 <section class="block" id="credentials">
   <div class="wrap">
     <h2 class="title rv"><span class="grad">Credentials</span><small>證照與資格</small></h2>
+    <h3 class="sub-title rv">金融與證券 <small>Finance &amp; Securities</small></h3>
     <div class="creds">
       <div class="card cred rv"><div class="ic">📈</div><h4>證券商業務員</h4><span>證券暨期貨市場發展基金會</span></div>
       <div class="card cred rv"><div class="ic">🏦</div><h4>金融市場常識與職業道德</h4><span>台灣金融研訓院</span></div>
+    </div>
+    <h3 class="sub-title rv">會計與財稅 <small>Accounting &amp; Tax</small></h3>
+    <div class="creds">
       <div class="card cred rv"><div class="ic">🧮</div><h4>丙級會計事務技術士</h4><span>勞動部技能檢定</span></div>
-      <div class="card cred rv"><div class="ic">💻</div><h4>丙級電腦軟體應用技術士</h4><span>勞動部技能檢定</span></div>
       <div class="card cred rv"><div class="ic">🧾</div><h4>TQC-OA 電腦會計</h4><span>電腦技能基金會</span></div>
-      <div class="card cred rv"><div class="ic">📝</div><h4>TBSA 商務企劃能力初級</h4><span>商務企劃能力檢定</span></div>
-      <div class="card cred rv"><div class="ic">🏛️</div><h4>公職稅務經歷 5+ 年</h4><span>2020 – 2026</span></div>
+      <div class="card cred rv"><div class="ic">🏛️</div><h4>公職稅務經歷 5+ 年</h4><span>2020 – 2026 · 經歷</span></div>
+    </div>
+    <h3 class="sub-title rv">資料與 AI <small>Data &amp; AI</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">🗄️</div><h4>Introduction to SQL</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">🐍</div><h4>Introduction to Python</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">🤖</div><h4>Generative AI for Business</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">🧰</div><h4>Introduction to AI for Work</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">⚙️</div><h4>Introduction to Python for Developers</h4><span>DataCamp · 2026.11</span></div>
+      <div class="card cred rv"><div class="ic">✨</div><h4>Generative AI Foundations</h4><span>Pearson Critical Career Skills · 2026.10</span></div>
+      <div class="card cred rv"><div class="ic">💻</div><h4>丙級電腦軟體應用技術士</h4><span>勞動部技能檢定</span></div>
       <div class="card cred rv"><div class="ic">🧠</div><h4>AI 大數據班 結訓</h4><span id="cred-ai">預計 2027.02</span></div>
+    </div>
+    <h3 class="sub-title rv">商務企劃 <small>Business</small></h3>
+    <div class="creds">
+      <div class="card cred rv"><div class="ic">📝</div><h4>TBSA 商務企劃能力初級</h4><span>商務企劃能力檢定</span></div>
     </div>
   </div>
 </section>
@@ -792,10 +810,14 @@ soup = BeautifulSoup(html, <span class="s">"html.parser"</span>)
       有 HackMD 筆記的話，加一行 link:"筆記網址" 會出現「看完整筆記」。
    ================================================================ */
 const JOURNAL = [
+  { date:"2026-11-04", cat:"課程驗收專案", title:"AML 反洗錢交易監控系統（AI 生成，我在 Linux 虛擬機執行與驗收）",
+    text:"課程驗收作業：模擬銀行法遵人員檢查可疑交易。5 條監控規則（大額、拆單、高風險國家、快進快出、收入不符）、案件審查與主管核定申報、CSV 匯入驗證。程式由 AI 生成，我依指示在 Linux 虛擬機（Bash + dialog + MariaDB）自己建置、執行並驗收，資料皆為虛構。從中學到金融風控規則怎麼用 SQL 表達。",
+    tags:"#課程驗收專案 #AML #MariaDB #Bash",
+    link:"https://hackmd.io/@Yihsuanchen1/ByQnptgTMe" },
   { date:"2026-10-16", title:"前端基礎：看懂 HTML，才知道爬蟲要去哪裡抓資料",
     text:"學會用 id、class、屬性與層級關係定位網頁元素。看懂結構就像查帳先看懂科目，之後就能把每天手抄的匯率變成自動排程。",
     tags:"#HTML #爬蟲 #CSSSelector" },
-  { date:"2026-09-30", title:"小組作業：第一份放上 GitHub Pages 的分析報告",
+  { date:"2026-09-30", cat:"小組作業", title:"第一份放上 GitHub Pages 的分析報告",
     text:"和組員一起整理老師的講義、標出簡報頁數，再用 Claude 生成 27 個情境的 5×5 風險矩陣報告，並放上 GitHub Pages。第一次走完從講義到線上報告的流程；『如果沒做到，會發生什麼事？』這個問法，跟查核時評估內控缺失很像。",
     tags:"#資安 #風險評估 #GitHub" },
   { date:"2026-09-17", title:"從 ipconfig 看懂網路怎麼運作",
@@ -853,7 +875,7 @@ document.getElementById("mods").innerHTML=MODULES.map(m=>{
   const lb=st==="done"?"✓ done":st==="live"?"● now":m[1].slice(5).replace("-","/");
   return `<div class="mod ${st}"><span>${m[0]}</span><span class="s">${lb}</span></div>`;}).join("");
 document.getElementById("journal").innerHTML=JOURNAL.slice(0,SHOW).map(j=>
-  `<article class="card entry rv"><time>${j.date.replaceAll("-",".")}</time><h4>${j.title}</h4><p>${j.text}</p><div class="tg">${j.tags}</div>${j.link?`<a class="nl" href="${j.link}" target="_blank" rel="noopener">📓 看完整筆記 ↗</a>`:""}</article>`).join("");
+  `<article class="card entry rv"><time>${j.date.replaceAll("-",".")}</time><h4>${j.cat?`<span class="chip">${j.cat}</span> `:""}${j.title}</h4><p>${j.text}</p><div class="tg">${j.tags}</div>${j.link?`<a class="nl" href="${j.link}" target="_blank" rel="noopener">📓 看完整筆記 ↗</a>`:""}</article>`).join("");
 
 // 聯絡表單 → 開啟郵件程式
 document.getElementById("form").addEventListener("submit",e=>{
