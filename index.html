@@ -561,6 +561,17 @@ footer p{color:var(--text-3);font-size:14px;margin-top:6px}
         </div>
       </article>
 
+      <article class="card proj rv">
+        <div class="body">
+          <div class="awards"><span class="aw2">Team Project · Presented 2026-11-25</span></div>
+          <h3>公司解散登記清冊分析 <span class="en">Company Dissolution Analysis (Power BI)</span></h3>
+          <p>3 人小組，用經濟部 2021–2025 年 60 個月的公司解散登記清冊（108,281 筆），回答「什麼樣的公司最容易在一年內就解散」。先以敘述性分析看現況，再用鑽研與分解樹做診斷性分析。我負責縣市與資本額分布、散佈圖與分解樹，並擔任彙整與統籌（合併三人圖表、設定兩頁鑽研、撰寫作戰手冊與逐字稿）。發現全台短命率 8.0%，資本額 10 萬以下升到 23.6%，若又登記在群聚地址（同址 ≥3 家解散）達 37.5%。</p>
+          <div class="metrics"><div><b class="grad">108,281</b><span>筆解散登記</span></div><div><b class="grad">8.0% → 37.5%</b><span>小資本＋群聚地址短命率</span></div><div><b class="grad">2 頁</b><span>敘述 → 診斷（鑽研）</span></div></div>
+          <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Drill-through</span><span class="chip">Data Storytelling</span><span class="chip">GitHub</span></div>
+          <div class="foot"><span class="role">👥 小組作業｜資本額與成因分析＋彙整統籌</span> <a href="https://github.com/KellyChen413/PowerBI_Group_Company-Dissolution-Registration-Analysis" target="_blank" rel="noopener">GitHub</a></div>
+        </div>
+      </article>
+
       <article class="card proj planned rv">
         <div class="body">
           <div class="awards"><span class="aw2">Side Project · Planned Q1 2027</span></div>
@@ -837,6 +848,9 @@ soup = BeautifulSoup(html, <span class="s">"html.parser"</span>)
       有 HackMD 筆記的話，加一行 link:"筆記網址" 會出現「看完整筆記」。
    ================================================================ */
 const JOURNAL = [
+  { date:"2026-11-25", cat:"小組作業", title:"Power BI 分組報告：什麼樣的公司最容易一年內就解散？",
+    text:"3 人小組用經濟部公司解散登記清冊（108,281 筆）做 Power BI 儀表板，直接在 Power BI 上台報告。Page 1 敘述性分析看縣市與資本額分布，Page 2 用鑽研和分解樹找原因：資本額 10 萬以下、又登記在群聚地址的公司，短命率 37.5%，是全台 8.0% 的 4 倍多。我負責資本額與成因分析，並把三人的圖表合併成一份報告。最大的收穫：鑽研時『保留所有篩選』會把圖例條件一起帶過去，數字對不上時要先回頭檢查篩選。",
+    tags:"#小組作業 #PowerBI #DAX #資料分析" },
   { date:"2026-11-04", cat:"課程驗收專案", title:"AML 反洗錢交易監控系統（AI 生成，我在 Linux 虛擬機執行與驗收）",
     text:"課程驗收作業：模擬銀行法遵人員檢查可疑交易。5 條監控規則（大額、拆單、高風險國家、快進快出、收入不符）、案件審查與主管核定申報、CSV 匯入驗證。程式由 AI 生成，我依指示在 Linux 虛擬機（Bash + dialog + MariaDB）自己建置、執行並驗收，資料皆為虛構。從中學到金融風控規則怎麼用 SQL 表達。",
     tags:"#課程驗收專案 #AML #MariaDB #Bash",
